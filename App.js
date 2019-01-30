@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
     	return (
 
-      		<View style={styles.buttonContainer}>        		
+      		<View style={styles.container}>
 				<Button
 					alignItems='center'
 					justifyContent='center'
@@ -31,9 +31,9 @@ export default class App extends React.Component {
 		           			.then(response => {return response.json(); })
 		           			.then(function(data) {
 		           				num = data
+                                Alert.alert('You tapped the button: ' + num);
 		           			});
       						// .then(data => this.setState({ data }));
-      					Alert.alert('You tapped the button: ' + num);
 		           	}}
 		           	title="Press Me">
 		        </Button>
